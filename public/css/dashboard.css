@@ -1,0 +1,526 @@
+:root {
+    --main-color_0: #0c3af7;
+    --main-color_1: #0467d6;
+    --main-color_2: #00b0eb;
+    --main-color_3: #e9ecf3;
+    --main-color_4: #05f5a6;
+    --second-color_0: #7497a8;
+    --second-color_1: #356075;
+    --second-color_2: #3f525c;
+    --second-color_3: #1d7aa8;
+    --second-color_4: #a9dcf5;
+    --danger-color: #e61919;
+    --success-color: #09ab6f;
+    --success-color-hover: #01d284;
+}
+
+body {
+    min-width: 320px;
+    min-height: 360px;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 60px;
+}
+
+body,
+body * {
+    box-sizing: border-box;
+}
+
+.bg-color-1 {
+    background-color: var(--main-color_1);
+}
+.bg-color-2 {
+    background-color: var(--main-color_2);
+}
+.bg-color-3 {
+    background-color: var(--main-color_3);
+}
+.bg-color-4 {
+    background-color: var(--main-color_4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--main-color_1);
+}
+
+/*********************** footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+/*********************** navbar */
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer .container,
+.navbar .navbar-brand {
+    flex: 1;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+.container-fluid {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+.col-3 {
+    flex: 3;
+}
+.col-4 {
+    flex: 4;
+}
+.col-5 {
+    flex: 5;
+}
+.sidebar .nav-link.active {
+    color: var(--main-color_1);
+}
+.sidebar .nav-link {
+    color: var(--second-color_2);
+}
+
+/************************** Buttons */
+.btn {
+    color: #fff;
+    background-color: var(--main-color_2);
+    margin: 0em;
+    padding: 8px 8px;
+    border-width: 1px;
+    border-color: #0caadf;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn[disabled] {
+    cursor: initial;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--main-color_2);
+    border-color: var(--main-color_3);
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    color: #fff;
+    background-color: var(--second-color_3);
+    border-color: var(--second-color_3);
+}
+
+.btn-success {
+    color: #fff;
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover,
+.btn-success:active {
+    color: #fff;
+    background-color: var(--success-color-hover);
+    border-color: var(--success-color-hover);
+}
+
+
+.btn.pager-item.active {
+    background-color: var(--main-color_1);
+    border-color: var(--main-color_1);
+}
+
+.btn.pager-item,
+.btn.next,
+.btn.previous {
+    color: #fff;
+    background-color: var(--main-color_2);
+    border-color: var(--main-color_2);
+}
+
+.btn.next[disabled],
+.btn.previous[disabled] {
+    color: var(--main-color_2);
+    background-color: var(--main-color_3);
+    border-color: var(--main-color_3);
+}
+/************************** Main */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main .header {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .header .title {
+    padding: 0 10px;
+}
+
+.main .btn-toolbar {
+    flex: 1;
+}
+
+.main .btn-toolbar .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+/************************** Sidebar */
+.sidebar {
+    display: none;
+}
+
+/******************************** Table */
+.table {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #d0d0d0;
+    flex: 1 1 auto;
+}
+
+.table .actions a {
+    padding: 0 2px;
+}
+.table .actions .edit {
+    color: blue;
+}
+.table .actions .show {
+    color: green;
+}
+.table .actions .remove {
+    color: red;
+}
+
+.th {
+    display: none;
+    font-weight: 700;
+    background-color: #f2f2f2;
+}
+
+.th > .td {
+    white-space: nowrap;
+}
+
+.tr {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+
+.tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.td {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    padding: 0.5em;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0px;
+    white-space: nowrap;
+    border-bottom: 1px solid #d0d0d0;
+    font-weight: bold;
+}
+
+.table .thead [name="id"],
+.table .tbody [name="id"] {
+    flex: 0.2;
+}
+
+.table .thead [name="actions"],
+.table .tbody [name="actions"] {
+    flex: 0.6;
+}
+
+.table .thead [name="cpf"],
+.table .thead [name="email"],
+.table .tbody [name="cpf"],
+.table .tbody [name="email"] {
+    display: none;
+}
+/************************************* dashboard */
+.dashboard {
+    position: relative;
+}
+
+.dashboard .pagination {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    max-width: 320px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dashboard .pagination .pages {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.dashboard .search {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+.dashboard .search input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px 20px 12px 40px;
+    height: 43px;
+    background-color: white;
+    background-image: url(https://www.w3schools.com/css/searchicon.png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.dashboard .search .addon {
+    flex: 1;
+    text-align: center;
+    height: 30px;
+    padding: 4px 0;
+}
+
+/***** basics */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/******************** form */
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--second-color_1);
+}
+.form-group input.error {
+    border-color: var(--danger-color);
+}
+
+.form-group label.error {
+    font-size: 0.8em;
+    color: var(--danger-color);
+}
+
+.form-group input,
+.form-control {
+    width: 100%;
+    height: 30px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: transparent;
+    color: var(--second-color_1);
+}
+
+.form-group input::placeholder {
+    color: var(--second-color_4);
+}
+
+.form-group input:active,
+.form-group input:hover,
+.form-group input:focus {
+    outline-color: var(--second-color_4);
+}
+
+/******************************* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    display: none;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal .modal-content {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    min-width: 320px;
+    min-height: 300px;
+    background: #fff;
+}
+
+.modal .modal-header {
+    text-align: center;
+    color: #fff;
+    background-color: var(--main-color_1);
+    padding: 10px;
+}
+
+.modal .modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 20px;
+}
+
+.modal .modal-footer {
+    padding: 10px;
+}
+
+.modal .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*************** Alert */
+.alert {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.alert.alert-success {
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.alert.alert-danger {
+    border-color: var(--danger-color);
+    color: var(--danger-color);
+}
+
+/****************** flex */
+.flex1 {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.flex3 {
+    flex: 3;
+}
+
+/* point  > 425 and < 768 */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .main {
+        padding: 0 20px;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-group {
+        flex: 1;
+    }
+}
+
+/* point < 768 */
+@media screen and (min-width: 768px) {
+    .sidebar {
+        display: flex;
+    }
+
+    .table .thead [name="cpf"],
+    .table .thead [name="email"],
+    .table .tbody [name="cpf"],
+    .table .tbody [name="email"] {
+        display: flex;
+    }
+
+    .table .thead [name="actions"],
+    .table .tbody [name="actions"] {
+        flex: 0.4;
+    }
+
+    .main .header {
+        position: relative;
+    }
+    
+    .main .dashboard .btn-toolbar {
+        width: 200px;
+        float: right;
+    }
+
+    .main .header .btn-toolbar {
+        position: absolute;
+        width: 200px;
+        right: 0;
+        top: 10px;
+    }
+}
+
+@media screen and (min-width: 906px) {
+    .footer .container,
+    .navbar .container,
+    .main {
+        margin: 0 auto;
+        width: 80%;
+        min-width: 768px;
+        padding: 0;
+    }
+}
